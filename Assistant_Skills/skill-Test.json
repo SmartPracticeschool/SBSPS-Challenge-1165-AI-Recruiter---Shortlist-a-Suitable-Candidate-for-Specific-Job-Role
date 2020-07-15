@@ -1,0 +1,1633 @@
+{
+  "intents": [
+    {
+      "intent": "Answers",
+      "examples": [
+        {
+          "text": "JDB"
+        },
+        {
+          "text": "stdlib.h"
+        },
+        {
+          "text": "stack"
+        },
+        {
+          "text": "JVM"
+        },
+        {
+          "text": "Bytecode is executed by JVM"
+        },
+        {
+          "text": "The applet makes the Java code secure and portable"
+        },
+        {
+          "text": "Dynamic"
+        },
+        {
+          "text": "Use of pointers"
+        },
+        {
+          "text": "True"
+        },
+        {
+          "text": "False"
+        },
+        {
+          "text": "1"
+        },
+        {
+          "text": "0"
+        },
+        {
+          "text": "32 bytes"
+        },
+        {
+          "text": "31"
+        },
+        {
+          "text": "63"
+        },
+        {
+          "text": "registers"
+        },
+        {
+          "text": "48 bytes"
+        },
+        {
+          "text": "memory.h"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "options",
+      "examples": [
+        {
+          "text": "yes"
+        },
+        {
+          "text": "okay"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "Good morning"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "options",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "okay",
+          "synonyms": [
+            "kk",
+            "k",
+            "ok"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "s",
+            "ss"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "ga",
+            "gud aftn"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hai",
+          "synonyms": [
+            "hii",
+            "hi",
+            "haiii"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hello",
+          "synonyms": [
+            "hlo",
+            "helo",
+            "hellooooo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good morning",
+          "synonyms": [
+            "gm",
+            "gud mrng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good evening",
+          "synonyms": [
+            "ge",
+            "gud evng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Answers",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": [
+            "one"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "0",
+          "synonyms": [
+            "zero"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "stdlib.h",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "32 bytes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "stack",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "48 bytes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "memory.h",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "31",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "63",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "registers",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bytecode is executed by JVM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "The applet makes the Java code secure and portable",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dynamic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Use of pointers",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "JVM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "JDB",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "False",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "True",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1594753174606",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1594753174681",
+      "previous_sibling": "handler_3_1594753174681"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1594753174606",
+      "context": {
+        "Answers_JDB": "@Answers:JDB"
+      },
+      "conditions": "@Answers:JDB",
+      "event_name": "input",
+      "dialog_node": "handler_3_1594753174681"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1594748429742",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1594748429783",
+      "previous_sibling": "handler_9_1594748429783"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1594748429742",
+      "event_name": "input",
+      "dialog_node": "handler_9_1594748429783"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1594752387730",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1594752387805",
+      "previous_sibling": "handler_10_1594752387805"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1594752387730",
+      "context": {
+        "Answers__Bytecode": "@Answers:(Bytecode is executed by JVM)"
+      },
+      "conditions": "@Answers:(Bytecode is executed by JVM)",
+      "event_name": "input",
+      "dialog_node": "handler_10_1594752387805"
+    },
+    {
+      "type": "standard",
+      "title": "JWrong2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Are you ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594752704462",
+      "conditions": "@Answers != \"Use of pointers\"",
+      "dialog_node": "node_4_1594752943168",
+      "previous_sibling": "node_10_1594752826532"
+    },
+    {
+      "type": "frame",
+      "title": "JCorrect2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great! Are you ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594752704462",
+      "conditions": "@Answers:(Use of pointers)",
+      "dialog_node": "node_10_1594752826532"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594759259468",
+      "dialog_node": "response_8_1594759415803",
+      "previous_sibling": "response_8_1594759314662"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! You have failed the exam. Better luck next time."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594759259468",
+      "conditions": "!(($Answers__Bytecode and $Answers__Use) or ($Answers__Use and $Answers_JDB) or ($Answers__Bytecode and $Answers_JDB))",
+      "dialog_node": "response_8_1594759314662",
+      "previous_sibling": "response_4_1594759279194"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Excellent! You have successfully passed all the three tests. Your next step is to clear the SWAR test."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594759259468",
+      "conditions": "(($Answers__Bytecode and $Answers__Use) or ($Answers__Use and $Answers_JDB) or ($Answers__Bytecode and $Answers_JDB))",
+      "dialog_node": "response_4_1594759279194"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1594747938841",
+      "dialog_node": "slot_5_1594748067357",
+      "previous_sibling": "slot_4_1594748009605"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1594747938841",
+      "variable": "$Answers_63",
+      "dialog_node": "slot_4_1594748009605"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1594752892775",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1594752892818",
+      "previous_sibling": "handler_9_1594752892818"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_2_1594752892775",
+      "event_name": "input",
+      "dialog_node": "handler_9_1594752892818"
+    },
+    {
+      "type": "standard",
+      "title": "Wrong3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Here is your test-1 result."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1594748258872",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1594758268373"
+      },
+      "conditions": "@Answers != \"registers\"",
+      "dialog_node": "node_4_1594748525615",
+      "previous_sibling": "node_8_1594748355152"
+    },
+    {
+      "type": "frame",
+      "title": "Correct3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Very good! Correct answer. Here is test-1 results."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1594748258872",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1594758268373"
+      },
+      "conditions": "@Answers:registers",
+      "dialog_node": "node_8_1594748355152"
+    },
+    {
+      "type": "standard",
+      "title": "Wrong2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Wrong answer. Ready to answer  next question ? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594747787290",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1594748258872"
+      },
+      "conditions": "@Answers != \"63\"",
+      "dialog_node": "node_9_1594748110894",
+      "previous_sibling": "node_5_1594747938841"
+    },
+    {
+      "type": "frame",
+      "title": "Correct2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Excellent! Ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594747787290",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1594748258872"
+      },
+      "conditions": "@Answers:63",
+      "dialog_node": "node_5_1594747938841"
+    },
+    {
+      "type": "standard",
+      "title": "PWrong3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Here is your test-2 results."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1594751323418",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1594758803419"
+      },
+      "conditions": "@Answers != \"48 bytes\"",
+      "dialog_node": "node_7_1594751601618",
+      "previous_sibling": "node_4_1594751460864"
+    },
+    {
+      "type": "frame",
+      "title": "PCorrect3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Great! Here is your Test-2 results."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1594751323418",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1594758803419"
+      },
+      "conditions": "@Answers:(48 bytes)",
+      "dialog_node": "node_4_1594751460864"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! You have failed the test-2. So, you are not eligible to take test-3. Better luck next time."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594758803419",
+      "conditions": "!(($Answers_False and $Answers_0) or ($Answers_0 and $Answers_48) or ($Answers_False and $Answers_48))",
+      "dialog_node": "response_1_1594758988587",
+      "previous_sibling": "response_7_1594758821612"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594758803419",
+      "dialog_node": "response_4_1594759076294",
+      "previous_sibling": "response_1_1594758988587"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Excellent! You have successfully passed the test-2. So you are eligible to take test-3. Are you ready to attempt test-3 ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594758803419",
+      "conditions": "(($Answers_False and $Answers_0) or ($Answers_0 and $Answers_48) or ($Answers_False and $Answers_48))",
+      "dialog_node": "response_7_1594758821612"
+    },
+    {
+      "type": "standard",
+      "title": "Wrong1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Don't worry. \nReady to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1594747199754",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1594747787290"
+      },
+      "conditions": "@Answers != \"stdlib.h\"",
+      "dialog_node": "node_4_1594747573887",
+      "previous_sibling": "node_4_1594747447325"
+    },
+    {
+      "type": "frame",
+      "title": "Correct1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Well done! Ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1594747199754",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1594747787290"
+      },
+      "conditions": "@Answers:(stdlib.h)",
+      "dialog_node": "node_4_1594747447325"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1594753197898",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1594753197935",
+      "previous_sibling": "handler_8_1594753197935"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_7_1594753197898",
+      "event_name": "input",
+      "dialog_node": "handler_8_1594753197935"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! you have failed the test-1."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1594758268373",
+      "conditions": "!(($Answers__stdlib and $Answers_registers) or ($Answers__stdlib and $Answers_63) or ($Answers_63 and $Answers_registers))",
+      "dialog_node": "response_6_1594758393591",
+      "previous_sibling": "response_10_1594758300759"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Excellent! You have successfully passed the test-1.Are you ready to take test-2."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1594758268373",
+      "conditions": "(($Answers__stdlib and $Answers_registers) or ($Answers__stdlib and $Answers_63) or ($Answers_63 and $Answers_registers))",
+      "dialog_node": "response_10_1594758300759"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_3_1594748386837",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1594748386897",
+      "previous_sibling": "handler_2_1594748386897"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1594748386837",
+      "context": {
+        "Answers_registers": "@Answers:registers"
+      },
+      "conditions": "@Answers:registers",
+      "event_name": "input",
+      "dialog_node": "handler_2_1594748386897"
+    },
+    {
+      "type": "standard",
+      "title": "JWrong3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Wrong answer! Are your ready to check your test-3 results ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1594753032023",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1594759259468"
+      },
+      "conditions": "@Answers != \"JDB\"",
+      "dialog_node": "node_5_1594753255630",
+      "previous_sibling": "node_2_1594753140782"
+    },
+    {
+      "type": "frame",
+      "title": "JCorrect3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Well Done! Ready to check your test-3 results ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1594753032023",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1594759259468"
+      },
+      "conditions": "@Answers:JDB",
+      "dialog_node": "node_2_1594753140782"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1594747561106",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1594747561147",
+      "previous_sibling": "handler_8_1594747561147"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1594747561106",
+      "event_name": "input",
+      "dialog_node": "handler_8_1594747561147"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1594750845719",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1594750845756",
+      "previous_sibling": "handler_8_1594750845755"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1594750845719",
+      "event_name": "input",
+      "dialog_node": "handler_8_1594750845755"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1594753140782",
+      "dialog_node": "slot_7_1594753197898",
+      "previous_sibling": "slot_1_1594753174606"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1594753140782",
+      "variable": "$Answers_JDB",
+      "dialog_node": "slot_1_1594753174606"
+    },
+    {
+      "type": "standard",
+      "title": "JWrong1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Wrong answer! Are you ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594752177622",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1594752704462"
+      },
+      "conditions": "@Answers != \"The applet makes the Java code secure and portable\"",
+      "dialog_node": "node_7_1594752471675",
+      "previous_sibling": "node_4_1594752353566"
+    },
+    {
+      "type": "frame",
+      "title": "JCorrect1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Correct answer! Are you ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594752177622",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1594752704462"
+      },
+      "conditions": "@Answers:(Bytecode is executed by JVM)",
+      "dialog_node": "node_4_1594752353566"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1594751500220",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1594751500285",
+      "previous_sibling": "handler_6_1594751500285"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1594751500220",
+      "context": {
+        "Answers__48": "@Answers:(48 bytes)"
+      },
+      "conditions": "@Answers:(48 bytes)",
+      "event_name": "input",
+      "dialog_node": "handler_6_1594751500285"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594751460864",
+      "dialog_node": "slot_5_1594751535274",
+      "previous_sibling": "slot_8_1594751500220"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594751460864",
+      "variable": "$Answers__48",
+      "dialog_node": "slot_8_1594751500220"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1594750793049",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1594750793117",
+      "previous_sibling": "handler_8_1594750793117"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1594750793049",
+      "context": {
+        "Answers_False": "@Answers:False"
+      },
+      "conditions": "@Answers:False",
+      "event_name": "input",
+      "dialog_node": "handler_8_1594750793117"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1594751137757",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1594751137841",
+      "previous_sibling": "handler_5_1594751137841"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1594751137757",
+      "context": {
+        "Answers_0": "@Answers:0"
+      },
+      "conditions": "@Answers:0",
+      "event_name": "input",
+      "dialog_node": "handler_5_1594751137841"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1594751097540",
+      "dialog_node": "slot_7_1594751161007",
+      "previous_sibling": "slot_4_1594751137757"
+    },
+    {
+      "type": "slot",
+      "parent": "node_6_1594751097540",
+      "variable": "$Answers_0",
+      "dialog_node": "slot_4_1594751137757"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1594747484087",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1594747484171",
+      "previous_sibling": "handler_3_1594747484171"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1594747484087",
+      "context": {
+        "Answers__stdlib": "@Answers:(stdlib.h)"
+      },
+      "conditions": "@Answers:(stdlib.h)",
+      "event_name": "input",
+      "dialog_node": "handler_3_1594747484171"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1594751161007",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1594751161048",
+      "previous_sibling": "handler_6_1594751161048"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_7_1594751161007",
+      "event_name": "input",
+      "dialog_node": "handler_6_1594751161048"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1594752826532",
+      "dialog_node": "slot_2_1594752892775",
+      "previous_sibling": "slot_6_1594752868896"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1594752826532",
+      "variable": "$Answers__Use",
+      "dialog_node": "slot_6_1594752868896"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1594751535274",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1594751535318",
+      "previous_sibling": "handler_3_1594751535318"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_5_1594751535274",
+      "event_name": "input",
+      "dialog_node": "handler_3_1594751535318"
+    },
+    {
+      "type": "standard",
+      "title": "PWrong2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594750992704",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1594751323418"
+      },
+      "conditions": "@Answers != \"0\"",
+      "dialog_node": "node_1_1594751226278",
+      "previous_sibling": "node_6_1594751097540"
+    },
+    {
+      "type": "frame",
+      "title": "PCorrect2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Correct answer! Are to ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1594750992704",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1594751323418"
+      },
+      "conditions": "@Answers:0",
+      "dialog_node": "node_6_1594751097540"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1594748355152",
+      "dialog_node": "slot_3_1594748429742",
+      "previous_sibling": "slot_3_1594748386837"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1594748355152",
+      "variable": "$Answers_registers",
+      "dialog_node": "slot_3_1594748386837"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594747447325",
+      "dialog_node": "slot_3_1594747561106",
+      "previous_sibling": "slot_10_1594747484087"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594747447325",
+      "variable": "$Answers__stdlib",
+      "dialog_node": "slot_10_1594747484087"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1594750660975",
+      "dialog_node": "slot_3_1594750845719",
+      "previous_sibling": "slot_9_1594750793049"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1594750660975",
+      "variable": "$Answers_False",
+      "dialog_node": "slot_9_1594750793049"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594752353566",
+      "dialog_node": "slot_1_1594752412946",
+      "previous_sibling": "slot_10_1594752387730"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1594752353566",
+      "variable": "$Answers__Bytecode",
+      "dialog_node": "slot_10_1594752387730"
+    },
+    {
+      "type": "standard",
+      "title": "PWrong1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry! Wrong answer. Are you ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594749971396",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1594750992704"
+      },
+      "conditions": "@Answers != \"False\"",
+      "dialog_node": "node_1_1594750915824",
+      "previous_sibling": "node_1_1594750660975"
+    },
+    {
+      "type": "frame",
+      "title": "PCorrect1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Well done! Ready to answer next question ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1594749971396",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1594750992704"
+      },
+      "conditions": "@Answers:False",
+      "dialog_node": "node_1_1594750660975"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1594752868896",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1594752868977",
+      "previous_sibling": "handler_7_1594752868976"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1594752868896",
+      "context": {
+        "Answers__Use": "@Answers:(Use of pointers)"
+      },
+      "conditions": "@Answers:(Use of pointers)",
+      "event_name": "input",
+      "dialog_node": "handler_7_1594752868976"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Wrong Answer."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_4_1594748009605",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1594748009674",
+      "previous_sibling": "handler_3_1594748009674"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1594748009605",
+      "context": {
+        "Answers_63": "@Answers:63"
+      },
+      "conditions": "@Answers:63",
+      "event_name": "input",
+      "dialog_node": "handler_3_1594748009674"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1594752412946",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1594752412984",
+      "previous_sibling": "handler_2_1594752412984"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_1_1594752412946",
+      "event_name": "input",
+      "dialog_node": "handler_2_1594752412984"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1594748067357",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1594748067400",
+      "previous_sibling": "handler_2_1594748067399"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_5_1594748067357",
+      "event_name": "input",
+      "dialog_node": "handler_2_1594748067399"
+    },
+    {
+      "type": "standard",
+      "title": "JQuestion3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your last question in test-3..\nWhich is used to find and fix bugs in the Java programs.\n->JVM\n->JDB"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_1_1594753032023",
+      "previous_sibling": "node_3_1594752704462"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Test is no longer available."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1594759259468",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Judgement1",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1594749971396"
+      },
+      "conditions": "#options",
+      "dialog_node": "node_6_1594758268373",
+      "previous_sibling": "node_1_1594748258872"
+    },
+    {
+      "type": "standard",
+      "title": "CQuestion3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your last question in test-1.\nRegister variables reside in\n-> stack\n-> registers"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@options:yes",
+      "dialog_node": "node_1_1594748258872",
+      "previous_sibling": "node_3_1594747787290"
+    },
+    {
+      "type": "standard",
+      "title": "Judgement2",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1594752177622"
+      },
+      "conditions": "#options",
+      "dialog_node": "node_9_1594758803419",
+      "previous_sibling": "node_4_1594751323418"
+    },
+    {
+      "type": "standard",
+      "title": "JQuestion1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to test-3.\nHere is your first question in test-3..\nWhich of the following option leads to the portability and security of Java?\n-> Bytecode is executed by JVM\n-> The applet makes the Java code secure and portable"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_3_1594752177622",
+      "previous_sibling": "node_9_1594758803419"
+    },
+    {
+      "type": "standard",
+      "title": "CQuestion1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "This is your test-1.\nHere is your first question.\nWhich header file should be included to use\nfunctions like malloc () and calloc ( )?\n-> memory.h\n-> stdlib.h"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options || @options",
+      "dialog_node": "node_2_1594747199754",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "CQuestion2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your second question in test-1.\nC99 standard guarantees uniqueness of how many number of characters for external names.\n-> 31\n-> 63"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@options:yes",
+      "dialog_node": "node_3_1594747787290",
+      "previous_sibling": "node_2_1594747199754"
+    },
+    {
+      "type": "standard",
+      "title": "PQuestion1",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to test-2.\nHere is your first question in test-2.\nPolymorphism is when a subclass can modify the behavior of its superclass.\n-> True\n-> False"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_9_1594749971396",
+      "previous_sibling": "node_6_1594758268373"
+    },
+    {
+      "type": "standard",
+      "title": "Judgement3",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#options",
+      "dialog_node": "node_9_1594759259468",
+      "previous_sibling": "node_1_1594753032023"
+    },
+    {
+      "type": "standard",
+      "title": "JQuestion2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your second question in test-3...\nWhich of the following is not a Java features?\n->Dynamic\n->Use of pointers"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_3_1594752704462",
+      "previous_sibling": "node_3_1594752177622"
+    },
+    {
+      "type": "standard",
+      "title": "PQuestion3",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your last question in test-2.\nWhat is the size of an empty tuple in Python?\n-> 32 bytes\n-> 48 bytes"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_4_1594751323418",
+      "previous_sibling": "node_10_1594750992704"
+    },
+    {
+      "type": "standard",
+      "title": "PQuestion2",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your second question in Test-2.\nWhat is the value of round(12.5) - round(11.5)?\n-> 1\n-> 0"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#options",
+      "dialog_node": "node_10_1594750992704",
+      "previous_sibling": "node_9_1594749971396"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. Are you ready to take the test ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Test",
+  "language": "en",
+  "description": ""
+}
